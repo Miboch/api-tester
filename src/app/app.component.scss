@@ -1,0 +1,30 @@
+@import 'theme';
+@import 'mixins';
+
+:host {
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+}
+
+.content-wrapper {
+  padding: $spacing-sm $spacing;
+  grid-row-start: 2;
+  width: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+.menu-wrapper {
+  @include shadow();
+  grid-row-start: 1;
+  background-color: $primary;
+  padding: $spacing-sm;
+}

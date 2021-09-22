@@ -1,1 +1,8 @@
-<p>menu works!</p>
+<div class="menu">
+  <div class="brand">api ui</div>
+  <ul role="menu">
+    <li *ngFor="let item of menuItems" routerLinkActive="active-route">
+      <a [routerLink]="item.path"> {{item.label}}</a>
+    </li>
+  </ul>
+</div>

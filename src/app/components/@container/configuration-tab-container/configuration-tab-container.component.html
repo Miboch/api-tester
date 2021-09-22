@@ -1,0 +1,20 @@
+﻿<div class="tab-container-wrapper">
+  <div class="tab-label-outlet">
+    <ng-container *ngIf="tabs">
+      <ul>
+        <li *ngFor="let t of tabs.toArray()" [ngClass]="{selected: t == currentTab}" (click)="switchTab(t)">
+          {{t.tabTitle}}
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+  <div class="tab-outlet">
+    <ng-container *ngIf="currentTab">
+      <ng-container *ngTemplateOutlet="currentTab.tabTemplate"></ng-container>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template>
+  <ng-content></ng-content>
+</ng-template>

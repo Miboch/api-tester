@@ -1,0 +1,21 @@
+﻿$base: #2A2C2B;
+
+$base-t1: #5e6260;
+$base-t2: #939795;
+$base-t3: #c9cbca;
+$base-t4: #efefef;
+
+$base-s1: #1f2120;
+$base-s2: #151616;
+$base-s3: #0b0b0b;
+
+$primary: $base-s2 !default;
+$secondary: #F38BA0;
+$secondary-s1: darken($secondary, 15);
+$secondary-s2: darken($secondary, 30);
+$secondary-t1: lighten($secondary, 15);
+
+$spacing: 1rem;
+$spacing-sm: .5rem;
+
+$text: $base-t4 !default;

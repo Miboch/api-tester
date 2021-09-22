@@ -1,12 +1,18 @@
-﻿import {Action, createReducer} from '@ngrx/store';
-import {ConfigurationState} from '../../../model/state/configuration-state';
+﻿import {Action, createReducer, on} from '@ngrx/store';
+import {ConfigurationState} from '../../model/state/configuration-state';
+import {updateFoo} from '../actions/configuration.action';
 
 const initialConfigurationState: ConfigurationState = {
-  foo: "Hello World"
+  apiIds: [],
+  apiList: [],
+  endpoints: []
 }
 
 const _reduce = createReducer(
-  initialConfigurationState
+  initialConfigurationState,
+  on(updateFoo, (state, {payload}) => ({
+    ...state,
+  }))
 );
 
 

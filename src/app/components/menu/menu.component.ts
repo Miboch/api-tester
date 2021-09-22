@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MenuItemModel} from '../../model/menu-item.model';
 
 @Component({
   selector: 'app-menu',
@@ -6,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  menuItems: MenuItemModel[] = [
+    {
+      label: 'Configuration',
+      path: '/configuration'
+    },
+    {
+      label: 'APIs',
+      path: '/api'
+    }
+  ];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

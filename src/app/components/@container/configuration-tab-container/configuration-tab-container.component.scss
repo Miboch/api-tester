@@ -1,0 +1,58 @@
+﻿@import 'theme';
+
+.tab-container-wrapper {
+  width: 100%;
+  min-height: 100%;
+  background-color: $base-s3;
+  display: grid;
+  grid-template-columns: 330px 1fr;
+}
+
+.tab-label-outlet {
+  background-color: $base-s2;
+  height: 100%;
+  width: 330px;
+  padding: $spacing;
+  border-right: 1px solid $base-s3;
+}
+
+.tab-outlet {
+  padding: $spacing;
+  background-color: $base-s1;
+}
+
+ul {
+  margin: 0 auto;
+  width: 300px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: sticky;
+  top: $spacing-sm;
+  li {
+    padding: $spacing;
+    cursor: pointer;
+    user-select: none;
+    background-color: $base;
+    border-bottom: 1px solid $base-s2;
+    transition: .1s ease-in-out all;
+    width: 100%;
+    &:last-of-type {
+      border: 1px solid transparent;
+    }
+    &:hover {
+      background-color: $secondary;
+    }
+    &.selected {
+      background-color: $secondary-s1;
+      color: $text;
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+
+  }
+}

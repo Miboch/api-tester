@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'theme';
+
+@font-face {
+  font-family: noto;
+  src: url("assets/NotoSans.ttf") format("truetype");
+}
+
+:root {
+  font-family: noto, sans-serif;
+  font-size: 12pt;
+  line-height: 1.25em;
+  color: $text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $base;
+}
+
+a {
+  color: $text;
+  text-decoration: none;
+  &:hover {
+    color: $secondary;
+  }
+  &:active {
+    color: $secondary-t1;
+  }
+}

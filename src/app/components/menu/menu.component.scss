@@ -1,0 +1,47 @@
+@import 'theme';
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  margin-right: $spacing;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  li {
+    display: flex;
+    height: 100%;
+    margin-right: $spacing;
+    align-items: center;
+    padding: $spacing-sm;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.active-route {
+      background-color: $secondary-s1;
+      border-radius: 5px;
+      a {
+        color: $text;
+      }
+
+      a:hover {
+        color: $secondary-t1;
+      }
+    }
+  }
+}
